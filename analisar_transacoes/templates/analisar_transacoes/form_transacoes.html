@@ -1,0 +1,20 @@
+{%  extends 'base.html' %}
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <h1>IMPORTAR TRANSAÇÕES</h1>
+                    <input type="file" class="form-control" name="document" id="formEnviarTransacoes">
+                    <label for="formEnviarTransacoes">Selecione o arquivo para realizar o upload</label>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Importar</button>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock content %}
